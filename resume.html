@@ -242,78 +242,41 @@
     /* ── CLIENTS ── */
     .clients-section { background: #fff; }
 
-    .clients-grid {
+    .project-list { border-top: 1px solid #e8e3dd; }
+
+    .project-row {
       display: grid;
-      grid-template-columns: repeat(2, 1fr);
-      gap: 2px;
-      margin-bottom: 50px;
+      grid-template-columns: 180px 1fr 160px;
+      align-items: center;
+      padding: 18px 0;
+      border-bottom: 1px solid #e8e3dd;
+      text-decoration: none;
+      transition: background 0.2s ease;
+      gap: 24px;
     }
 
-    .client-card {
-      background: #f7f5f3;
-      padding: 40px;
-      position: relative;
-      overflow: hidden;
-      transition: background 0.3s ease;
-    }
+    .project-row:hover { background: #f7f5f2; padding-left: 12px; }
 
-    .client-card:hover { background: #ede9e4; }
-
-    .client-brand {
+    .project-client {
       font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
       font-size: 11px;
-      letter-spacing: 4px;
+      letter-spacing: 2px;
       text-transform: uppercase;
       color: #bbb;
-      margin-bottom: 10px;
     }
 
-    .client-card h3 {
-      font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
-      font-size: 18px;
-      font-weight: 400;
-      letter-spacing: 2px;
+    .project-name {
+      font-family: Georgia, serif;
+      font-size: 15px;
       color: #1c1c1c;
-      margin-bottom: 12px;
     }
 
-    .client-card p {
-      font-size: 14px;
-      line-height: 1.8;
-      color: #777;
-      margin-bottom: 20px;
-    }
-
-    .client-tags {
-      display: flex;
-      flex-wrap: wrap;
-      gap: 8px;
-    }
-
-    .tag {
+    .project-type {
       font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
-      font-size: 10px;
-      letter-spacing: 2px;
-      text-transform: uppercase;
-      color: #999;
-      border: 1px solid #ddd;
-      padding: 4px 10px;
-    }
-
-    .client-link {
-      display: inline-block;
-      margin-top: 20px;
-      font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
-      font-size: 10px;
-      letter-spacing: 3px;
-      text-transform: uppercase;
+      font-size: 11px;
       color: #aaa;
-      border-bottom: 1px solid #ddd;
-      padding-bottom: 2px;
-      transition: all 0.3s ease;
+      text-align: right;
     }
-
-    .client-link:hover { color: #333; border-bottom-color: #333; }
 
     /* ── EDITORIAL / FEATURES ── */
     .features-section { background: #1c1c1c; }
@@ -647,94 +610,57 @@
     <div class="container">
       <p class="section-label">Selected Work</p>
       <h2 class="section-title">Client Projects</h2>
-      <div class="clients-grid">
-
-        <div class="client-card">
-          <p class="client-brand">Hendricks Gin</p>
-          <h3>Ways of Seeing</h3>
-          <p>Commission and production of an abstract short film, premiered at an experiential Sydney event.</p>
-          <div class="client-tags"><span class="tag">Film</span><span class="tag">Experiential</span></div>
-          <a href="projects/hendricks-x-ways-seeing.html" class="client-link">View Project &rarr;</a>
-        </div>
-
-        <div class="client-card">
-          <img src="images/projects/mini-tasmania-thumb.jpg" alt="MINI Discover Tasmania" class="client-img">
-          <p class="client-brand">MINI Australia</p>
-          <h3>Discover Tasmania</h3>
-          <p>Long-form feature writing and photography exploring Tasmania for MINI Australia&rsquo;s digital channels.</p>
-          <div class="client-tags"><span class="tag">Photography</span><span class="tag">Editorial</span></div>
-          <a href="projects/mini.html" class="client-link">View Project &rarr;</a>
-        </div>
-
-        <div class="client-card">
-          <img src="images/projects/mini-dark-mofo-thumb.jpg" alt="MINI x Dark Mofo" class="client-img">
-          <p class="client-brand">MINI Australia</p>
-          <h3>MINI x Dark Mofo</h3>
-          <p>Content coverage of MINI at Hobart&rsquo;s Dark Mofo winter arts festival.</p>
-          <div class="client-tags"><span class="tag">Content</span><span class="tag">Photography</span></div>
-          <a href="projects/mini-x-dark-mofo.html" class="client-link">View Project &rarr;</a>
-        </div>
-
-        <div class="client-card">
-          <p class="client-brand">MINI Australia</p>
-          <h3>MINI Drives the Blue Mountains</h3>
-          <p>Video and stills production for the new MINI Countryman for social and digital distribution.</p>
-          <div class="client-tags"><span class="tag">Video</span><span class="tag">Photography</span></div>
-          <a href="projects/mini-drives-blue-mountains.html" class="client-link">View Project &rarr;</a>
-        </div>
-
-        <div class="client-card">
-          <p class="client-brand">MINI Australia</p>
-          <h3>MINI Drives the Beach</h3>
-          <p>Video and stills at Hawks Nest putting the MINI range in an Australian coastal context.</p>
-          <div class="client-tags"><span class="tag">Video</span><span class="tag">Location Shoot</span></div>
-          <a href="projects/mini-drives-beach.html" class="client-link">View Project &rarr;</a>
-        </div>
-
-        <div class="client-card">
-          <p class="client-brand">China Eastern Airlines</p>
-          <h3>Social Media Strategy &amp; Setup</h3>
-          <p>Full Instagram strategy, design and content creation for China Eastern Airlines&rsquo; Australian presence.</p>
-          <div class="client-tags"><span class="tag">Social Strategy</span><span class="tag">Content</span></div>
-          <a href="projects/china-eastern-airlines-social-setup.html" class="client-link">View Project &rarr;</a>
-        </div>
-
-        <div class="client-card">
-          <img src="images/projects/cornersmith-thumb.jpg" alt="Cornersmith" class="client-img">
-          <p class="client-brand">Cornersmith</p>
-          <h3>Marrickville Relaunch</h3>
-          <p>Social media, photography and EDM content for Cornersmith Marrickville&rsquo;s relaunch.</p>
-          <div class="client-tags"><span class="tag">Social Media</span><span class="tag">Photography</span></div>
-          <a href="projects/cornersmith.html" class="client-link">View Project &rarr;</a>
-        </div>
-
-        <div class="client-card">
-          <img src="images/projects/sameview-thumb.jpg" alt="Sameview" class="client-img">
-          <p class="client-brand">Sameview</p>
-          <h3>Disability Care Platform</h3>
-          <p>Social strategy and content for a disability care coordination app.</p>
-          <div class="client-tags"><span class="tag">Social Strategy</span><span class="tag">Purpose-Led</span></div>
-          <a href="projects/sameview.html" class="client-link">View Project &rarr;</a>
-        </div>
-
-        <div class="client-card">
-          <img src="images/projects/shedd-thumb.jpg" alt="Shedd" class="client-img">
-          <p class="client-brand">Shedd</p>
-          <h3>Women&rsquo;s Fashion App</h3>
-          <p>Studio video production for a women&rsquo;s pre-loved fashion app.</p>
-          <div class="client-tags"><span class="tag">Video</span><span class="tag">Fashion</span></div>
-          <a href="projects/shedd.html" class="client-link">View Project &rarr;</a>
-        </div>
-
-        <div class="client-card">
-          <img src="images/projects/apop-thumb.jpg" alt="A Peace of Palestine" class="client-img">
-          <p class="client-brand">The Boweress x Ballare Co</p>
-          <h3>A Peace of Palestine</h3>
-          <p>Portrait exhibition and all-female panel at Comber Street Studios.</p>
-          <div class="client-tags"><span class="tag">Exhibition</span><span class="tag">Events</span></div>
-          <a href="projects/a-peace-of-palestine.html" class="client-link">View Project &rarr;</a>
-        </div>
-
+      <div class="project-list">
+        <a href="projects/hendricks-x-ways-seeing.html" class="project-row">
+          <span class="project-client">Hendricks Gin</span>
+          <span class="project-name">Ways of Seeing</span>
+          <span class="project-type">Film &middot; Experiential</span>
+        </a>
+        <a href="projects/mini.html" class="project-row">
+          <span class="project-client">MINI Australia</span>
+          <span class="project-name">Discover Tasmania</span>
+          <span class="project-type">Photography &middot; Editorial</span>
+        </a>
+        <a href="projects/mini-x-dark-mofo.html" class="project-row">
+          <span class="project-client">MINI Australia</span>
+          <span class="project-name">MINI x Dark Mofo</span>
+          <span class="project-type">Content &middot; Photography</span>
+        </a>
+        <a href="projects/mini-drives-blue-mountains.html" class="project-row">
+          <span class="project-client">MINI Australia</span>
+          <span class="project-name">MINI Drives the Blue Mountains</span>
+          <span class="project-type">Video &middot; Photography</span>
+        </a>
+        <a href="projects/mini-drives-beach.html" class="project-row">
+          <span class="project-client">MINI Australia</span>
+          <span class="project-name">MINI Drives the Beach</span>
+          <span class="project-type">Video &middot; Location Shoot</span>
+        </a>
+        <a href="projects/china-eastern-airlines-social-setup.html" class="project-row">
+          <span class="project-client">China Eastern Airlines</span>
+          <span class="project-name">Social Media Strategy &amp; Setup</span>
+          <span class="project-type">Social Strategy &middot; Content</span>
+        </a>
+        <a href="projects/cornersmith.html" class="project-row">
+          <span class="project-client">Cornersmith</span>
+          <span class="project-name">Marrickville Relaunch</span>
+          <span class="project-type">Social Media &middot; Photography</span>
+        </a>
+        <a href="projects/sameview.html" class="project-row">
+          <span class="project-client">Sameview</span>
+          <span class="project-name">Disability Care Platform</span>
+          <span class="project-type">Social Strategy &middot; Purpose-Led</span>
+        </a>
+        <a href="projects/shedd.html" class="project-row">
+          <span class="project-client">Shedd</span>
+          <span class="project-name">Women&rsquo;s Fashion App</span>
+          <span class="project-type">Video &middot; Fashion</span>
+        </a>
+        <a href="projects/a-peace-of-palestine.html" class="project-row">
+          <span class="project-client">The Boweress x Ballare Co</span>
+          <span class="project-name">A Peace of Palestine</span>
+          <span class="project-type">Exhibition &middot; Events</span>
+        </a>
       </div>
     </div>
   </section>
