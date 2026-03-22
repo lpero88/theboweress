@@ -723,3 +723,28 @@ h1, h2, h3, h4 {
         padding: 50px 0;
     }
 }
+
+/* Archive Notice */
+#archive-notice {
+    background: #f7f5f2;
+    border-top: 1px solid #e0dbd4;
+    border-bottom: 1px solid #e0dbd4;
+    padding: 52px 0;
+    text-align: center;
+}
+#archive-notice .archive-heading {
+    font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+    font-size: 11px;
+    letter-spacing: 3px;
+    text-transform: uppercase;
+    color: #999;
+    margin-bottom: 18px;
+}
+#archive-notice .archive-body {
+    font-family: Georgia, 'Times New Roman', serif;
+    font-size: 15px;
+    line-height: 1.85;
+    color: #555;
+    max-width: 640px;
+    margin: 0 auto;
+}
