@@ -6,6 +6,7 @@
   <title>The Story &mdash; The Boweress</title>
   <link rel="icon" href="images/favicon.png" sizes="32x32"/>
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"/>
+  <link rel="stylesheet" href="style.css"/>
   <style>
     *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
 
@@ -550,20 +551,36 @@
 </head>
 <body>
 
-  <!-- NAV -->
-  <nav style="position:fixed;top:0;left:0;right:0;z-index:100;display:flex;justify-content:space-between;align-items:center;padding:20px 40px;background:rgba(0,0,0,0.45);backdrop-filter:blur(4px);">
-    <a href="index.html"><img src="images/logo2.png" alt="The Boweress" style="height:28px;"></a>
-    <div style="display:flex;gap:32px;">
-      <a href="bowerbirds.html" style="font-family:'Helvetica Neue',sans-serif;font-size:11px;letter-spacing:3px;text-transform:uppercase;color:#fff;text-decoration:none;opacity:0.85;">BowerBirds</a>
-      <a href="features.html" style="font-family:'Helvetica Neue',sans-serif;font-size:11px;letter-spacing:3px;text-transform:uppercase;color:#fff;text-decoration:none;opacity:0.85;">Features</a>
-      <a href="projects.html" style="font-family:'Helvetica Neue',sans-serif;font-size:11px;letter-spacing:3px;text-transform:uppercase;color:#fff;text-decoration:none;opacity:0.85;">Projects</a>
-      <a href="about.html" style="font-family:'Helvetica Neue',sans-serif;font-size:11px;letter-spacing:3px;text-transform:uppercase;color:#fff;text-decoration:none;opacity:0.85;">About</a>
+  <header id="header">
+    <div class="container">
+      <div class="header-inner">
+        <div class="header-left">
+          <a href="index.html" id="logo" class="site-logo">
+            <img src="images/logo.png" alt="The Boweress">
+          </a>
+        </div>
+        <div class="header-right">
+          <button class="menu-toggle" aria-label="Menu">
+            <span></span><span></span><span></span>
+          </button>
+          <nav id="nav" class="site-nav">
+            <ul>
+              <li><a href="about.html">About</a></li>
+              <li><a href="bowerbirds.html">BowerBirds</a></li>
+              <li><a href="features.html">Features</a></li>
+              <li><a href="agency.html">Agency</a></li>
+              <li><a href="clients.html">Clients</a></li>
+              <li><a href="contact.html">Contact</a></li>
+            </ul>
+          </nav>
+        </div>
+      </div>
     </div>
-  </nav>
+  </header>
 
   <!-- HERO -->
   <section class="hero">
-    <div class="hero-logo" style="display:none;">
+    <div class="hero-logo">
       <a href="index.html">
         <img src="images/logo2.png" alt="The Boweress">
       </a>
