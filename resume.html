@@ -1,0 +1,1131 @@
+<!DOCTYPE html>
+<html lang="en-US">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Lucy Pero &mdash; The Boweress | Portfolio</title>
+  <link rel="icon" href="images/favicon.png" sizes="32x32"/>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"/>
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+    html { font-size: 16px; -webkit-font-smoothing: antialiased; scroll-behavior: smooth; }
+
+    body {
+      font-family: 'Georgia', 'Times New Roman', serif;
+      color: #333;
+      line-height: 1.6;
+      background: #fff;
+    }
+
+    a { color: inherit; text-decoration: none; transition: color 0.3s ease; }
+
+    ul { list-style: none; }
+
+    img { max-width: 100%; height: auto; display: block; }
+
+    .container {
+      max-width: 1100px;
+      margin: 0 auto;
+      padding: 0 30px;
+    }
+
+    /* ── HERO ── */
+    .hero {
+      min-height: 100vh;
+      background: linear-gradient(rgba(0,0,0,0.58), rgba(0,0,0,0.58)), url('images/Landing_1.jpg') center/cover no-repeat;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+      padding: 60px 30px;
+      position: relative;
+    }
+
+    .hero-logo {
+      position: absolute;
+      top: 40px;
+      left: 50%;
+      transform: translateX(-50%);
+    }
+
+    .hero-logo img { height: 32px; }
+
+    .hero-content { max-width: 720px; }
+
+    .hero-eyebrow {
+      font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+      font-size: 11px;
+      letter-spacing: 5px;
+      text-transform: uppercase;
+      color: #888;
+      margin-bottom: 24px;
+    }
+
+    .hero h1 {
+      font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+      font-size: clamp(36px, 6vw, 72px);
+      font-weight: 300;
+      letter-spacing: 6px;
+      text-transform: uppercase;
+      color: #fff;
+      line-height: 1.1;
+      margin-bottom: 32px;
+    }
+
+    .hero-desc {
+      font-size: 17px;
+      line-height: 1.8;
+      color: #999;
+      margin-bottom: 48px;
+      font-style: italic;
+    }
+
+    .hero-ctas {
+      display: flex;
+      gap: 16px;
+      justify-content: center;
+      flex-wrap: wrap;
+    }
+
+    .btn {
+      display: inline-block;
+      font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+      font-size: 11px;
+      letter-spacing: 4px;
+      text-transform: uppercase;
+      padding: 13px 32px;
+      transition: all 0.3s ease;
+    }
+
+    .btn-outline {
+      border: 1px solid #555;
+      color: #aaa;
+    }
+
+    .btn-outline:hover {
+      border-color: #fff;
+      color: #fff;
+    }
+
+    .btn-solid {
+      background: #fff;
+      color: #1c1c1c;
+    }
+
+    .btn-solid:hover {
+      background: #ddd;
+    }
+
+    .hero-scroll {
+      position: absolute;
+      bottom: 30px;
+      left: 50%;
+      transform: translateX(-50%);
+      font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+      font-size: 10px;
+      letter-spacing: 3px;
+      text-transform: uppercase;
+      color: #555;
+    }
+
+    /* ── SECTION ── */
+    section { padding: 90px 0; }
+
+    .section-label {
+      font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+      font-size: 10px;
+      letter-spacing: 5px;
+      text-transform: uppercase;
+      color: #bbb;
+      margin-bottom: 16px;
+    }
+
+    .section-title {
+      font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+      font-size: clamp(24px, 4vw, 42px);
+      font-weight: 300;
+      letter-spacing: 4px;
+      text-transform: uppercase;
+      color: #1c1c1c;
+      margin-bottom: 20px;
+    }
+
+    .section-intro {
+      font-size: 16px;
+      line-height: 1.9;
+      color: #666;
+      max-width: 640px;
+      margin-bottom: 60px;
+    }
+
+    /* ── INTRO / ABOUT ── */
+    .about-section { background: #fff; }
+
+    .about-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 80px;
+      align-items: center;
+    }
+
+    .about-text p {
+      font-size: 16px;
+      line-height: 1.9;
+      color: #555;
+      margin-bottom: 20px;
+    }
+
+    .about-text p:last-child { margin-bottom: 0; }
+
+    .about-stats {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 40px;
+    }
+
+    .stat-item { text-align: center; }
+
+    .stat-number {
+      font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+      font-size: 52px;
+      font-weight: 200;
+      color: #1c1c1c;
+      line-height: 1;
+      margin-bottom: 8px;
+    }
+
+    .stat-label {
+      font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+      font-size: 10px;
+      letter-spacing: 3px;
+      text-transform: uppercase;
+      color: #999;
+    }
+
+    /* ── SERVICES ── */
+    .services-section { background: #f7f5f3; }
+
+    .services-grid {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 30px;
+    }
+
+    .service-card {
+      padding: 40px 32px;
+      background: #fff;
+    }
+
+    .service-icon {
+      font-size: 24px;
+      color: #bbb;
+      margin-bottom: 20px;
+    }
+
+    .service-card h3 {
+      font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+      font-size: 13px;
+      letter-spacing: 3px;
+      text-transform: uppercase;
+      font-weight: 400;
+      margin-bottom: 14px;
+      color: #1c1c1c;
+    }
+
+    .service-card p {
+      font-size: 14px;
+      line-height: 1.8;
+      color: #777;
+    }
+
+    /* ── CLIENTS ── */
+    .clients-section { background: #fff; }
+
+    .clients-grid {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 2px;
+      margin-bottom: 50px;
+    }
+
+    .client-card {
+      background: #f7f5f3;
+      padding: 40px;
+      position: relative;
+      overflow: hidden;
+      transition: background 0.3s ease;
+    }
+
+    .client-card:hover { background: #ede9e4; }
+
+    .client-brand {
+      font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+      font-size: 11px;
+      letter-spacing: 4px;
+      text-transform: uppercase;
+      color: #bbb;
+      margin-bottom: 10px;
+    }
+
+    .client-card h3 {
+      font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+      font-size: 18px;
+      font-weight: 400;
+      letter-spacing: 2px;
+      color: #1c1c1c;
+      margin-bottom: 12px;
+    }
+
+    .client-card p {
+      font-size: 14px;
+      line-height: 1.8;
+      color: #777;
+      margin-bottom: 20px;
+    }
+
+    .client-tags {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 8px;
+    }
+
+    .tag {
+      font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+      font-size: 10px;
+      letter-spacing: 2px;
+      text-transform: uppercase;
+      color: #999;
+      border: 1px solid #ddd;
+      padding: 4px 10px;
+    }
+
+    .client-link {
+      display: inline-block;
+      margin-top: 20px;
+      font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+      font-size: 10px;
+      letter-spacing: 3px;
+      text-transform: uppercase;
+      color: #aaa;
+      border-bottom: 1px solid #ddd;
+      padding-bottom: 2px;
+      transition: all 0.3s ease;
+    }
+
+    .client-link:hover { color: #333; border-bottom-color: #333; }
+
+    /* ── EDITORIAL / FEATURES ── */
+    .features-section { background: #1c1c1c; }
+
+    .features-section .section-title { color: #fff; }
+    .features-section .section-label { color: #555; }
+    .features-section .section-intro { color: #777; }
+
+    .features-list {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 1px;
+    }
+
+    .feature-item {
+      background: #242424;
+      padding: 28px 24px;
+      transition: background 0.3s ease;
+    }
+
+    .feature-item:hover { background: #2a2a2a; }
+
+    .feature-item .date {
+      font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+      font-size: 10px;
+      letter-spacing: 2px;
+      color: #555;
+      margin-bottom: 8px;
+    }
+
+    .feature-item h4 {
+      font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+      font-size: 13px;
+      font-weight: 400;
+      letter-spacing: 1px;
+      color: #bbb;
+      line-height: 1.5;
+    }
+
+    /* ── BOWERBIRDS ── */
+    .bowerbirds-section { background: #f7f5f3; }
+
+    .bowerbirds-intro-grid {
+      display: grid;
+      grid-template-columns: 1fr 2fr;
+      gap: 80px;
+      align-items: start;
+    }
+
+    .bowerbirds-names {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 6px 20px;
+    }
+
+    .bowerbird-name {
+      font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+      font-size: 12px;
+      letter-spacing: 1px;
+      color: #888;
+      padding: 6px 0;
+      border-bottom: 1px solid #e8e4e0;
+    }
+
+    /* ── SKILLS ── */
+    .skills-section { background: #fff; }
+
+    .skills-grid {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 0;
+    }
+
+    .skill-row {
+      padding: 24px 0;
+      border-bottom: 1px solid #eee;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    .skill-name {
+      font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+      font-size: 13px;
+      letter-spacing: 2px;
+      text-transform: uppercase;
+      color: #333;
+    }
+
+    .skill-bar {
+      width: 120px;
+      height: 2px;
+      background: #eee;
+      position: relative;
+    }
+
+    .skill-fill {
+      position: absolute;
+      left: 0;
+      top: 0;
+      height: 100%;
+      background: #1c1c1c;
+    }
+
+    /* ── CTA ── */
+    .cta-section {
+      background: #1c1c1c;
+      padding: 100px 0;
+      text-align: center;
+    }
+
+    .cta-section .section-label { color: #555; }
+    .cta-section .section-title { color: #fff; margin-bottom: 16px; }
+    .cta-section p { color: #777; font-size: 16px; margin-bottom: 40px; }
+
+    /* ── FOOTER ── */
+    .resume-footer {
+      background: #111;
+      padding: 30px;
+      text-align: center;
+    }
+
+    .resume-footer p {
+      font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+      font-size: 11px;
+      letter-spacing: 2px;
+      color: #444;
+    }
+
+    .resume-footer a {
+      color: #555;
+      transition: color 0.3s ease;
+    }
+
+    .resume-footer a:hover { color: #fff; }
+
+    /* ── ABOUT PORTRAIT ── */
+    .about-portrait {
+      width: 100%;
+      height: 360px;
+      object-fit: cover;
+      display: block;
+      margin-bottom: 30px;
+    }
+
+    /* ── CLIENT CARD IMAGE ── */
+    .client-img {
+      width: calc(100% + 80px);
+      margin: -40px -40px 28px -40px;
+      height: 200px;
+      object-fit: cover;
+      display: block;
+    }
+
+    /* ── BOWERBIRDS PHOTO GRID ── */
+    .bowerbirds-photo-grid {
+      display: grid;
+      grid-template-columns: repeat(5, 1fr);
+      gap: 3px;
+    }
+
+    .bowerbird-photo-item {
+      position: relative;
+      overflow: hidden;
+      display: block;
+      text-decoration: none;
+    }
+
+    .bowerbird-photo-item img,
+    .bowerbird-photo-item .bb-placeholder {
+      width: 100%;
+      height: 130px;
+      object-fit: cover;
+      display: block;
+      transition: transform 0.4s ease;
+    }
+
+    .bowerbird-photo-item .bb-placeholder {
+      background: #ddd;
+    }
+
+    .bowerbird-photo-item:hover img {
+      transform: scale(1.06);
+    }
+
+    .bowerbird-photo-name {
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      right: 0;
+      background: linear-gradient(transparent, rgba(0,0,0,0.72));
+      padding: 22px 6px 6px;
+      font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+      font-size: 9px;
+      letter-spacing: 1px;
+      color: #fff;
+      text-align: center;
+      line-height: 1.3;
+    }
+
+    /* ── LUCY ── */
+    .lucy-section { background: #f7f5f3; }
+
+    .lucy-grid {
+      display: grid;
+      grid-template-columns: 3fr 2fr;
+      gap: 80px;
+      align-items: start;
+    }
+
+    .lucy-bio p {
+      font-size: 16px;
+      line-height: 1.9;
+      color: #555;
+      margin-bottom: 20px;
+    }
+
+    .lucy-bio p:last-child { margin-bottom: 0; }
+
+    .lucy-role-item {
+      padding: 20px 0;
+      border-bottom: 1px solid #e8e4e0;
+    }
+
+    .lucy-role-item:first-child { border-top: 1px solid #e8e4e0; }
+
+    .lucy-role-org {
+      font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+      font-size: 10px;
+      letter-spacing: 3px;
+      text-transform: uppercase;
+      color: #bbb;
+      margin-bottom: 5px;
+    }
+
+    .lucy-role-title {
+      font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+      font-size: 15px;
+      font-weight: 400;
+      color: #1c1c1c;
+      margin-bottom: 4px;
+    }
+
+    .lucy-role-dates {
+      font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+      font-size: 11px;
+      color: #aaa;
+      letter-spacing: 1px;
+    }
+
+    /* ── RESPONSIVE ── */
+    @media (max-width: 900px) {
+      .lucy-grid { grid-template-columns: 1fr; gap: 50px; }
+      .about-grid { grid-template-columns: 1fr; gap: 50px; }
+      .services-grid { grid-template-columns: 1fr 1fr; }
+      .features-list { grid-template-columns: repeat(2, 1fr); }
+      .clients-grid { grid-template-columns: 1fr; }
+      .bowerbirds-intro-grid { grid-template-columns: 1fr; }
+      .bowerbirds-photo-grid { grid-template-columns: repeat(4, 1fr); }
+      .skills-grid { grid-template-columns: 1fr; }
+    }
+
+    @media (max-width: 600px) {
+      .services-grid { grid-template-columns: 1fr; }
+      .features-list { grid-template-columns: 1fr 1fr; }
+      .about-stats { grid-template-columns: 1fr 1fr; }
+      .bowerbirds-photo-grid { grid-template-columns: repeat(3, 1fr); }
+      .hero-ctas { flex-direction: column; align-items: center; }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- HERO -->
+  <section class="hero">
+    <div class="hero-logo">
+      <a href="index.html">
+        <img src="images/logo2.png" alt="The Boweress">
+      </a>
+    </div>
+    <div class="hero-content">
+      <p class="hero-eyebrow">Archive &mdash; Lucy Pero, Founder &amp; Creative Director</p>
+      <h1>The Boweress</h1>
+      <p class="hero-desc">Sydney-based digital platform &amp; content studio &mdash; 2016&ndash;2019. Celebrating women through storytelling, community, and creative direction.</p>
+      <p style="margin-bottom:32px;font-family:'Helvetica Neue',sans-serif;font-size:11px;letter-spacing:2px;color:#555;">This page is a portfolio archive of theboweress.com</p>
+      <div class="hero-ctas">
+        <a href="#clients" class="btn btn-solid">View Client Work</a>
+        <a href="#bowerbirds" class="btn btn-outline">Community Platform</a>
+        <a href="https://web.archive.org/web/2018*/http://theboweress.com/" class="btn btn-outline" target="_blank" rel="noopener">Original Site &rarr;</a>
+      </div>
+      <p style="margin-top:40px;font-family:'Helvetica Neue',sans-serif;font-size:11px;letter-spacing:3px;color:#444;">#findyourbowery</p>
+    </div>
+    <div class="hero-scroll">Scroll to explore</div>
+  </section>
+
+  <!-- ABOUT -->
+  <section class="about-section" id="about">
+    <div class="container">
+      <div class="about-grid">
+        <div class="about-text">
+          <p class="section-label">About</p>
+          <h2 class="section-title">What Was<br>The Boweress?</h2>
+          <p>The Boweress was a Sydney-based digital platform and content studio, founded and directed by Lucy Pero. Operating from 2016 to 2019, it celebrated gender parity, challenged stereotypes, and forged positive visibility for women &mdash; highlighting their achievements across creative, commercial, and activist spheres.</p>
+          <p>The name comes from Medieval England. The <em>Bower</em> was a private room within a castle &mdash; an attractive withdrawing space intended for the lady of the household. The Boweress reimagined that idea for the contemporary moment: the personal havens women create for themselves, for reflection as much as creation, for collaboration as much as solitude.</p>
+          <p>&ldquo;We believe there is a symbiotic relationship between a connection to habitat and a sense of collaboration.&rdquo;</p>
+          <p>Beyond its editorial and community work, the studio produced content and events for select clients &mdash; from global automotive brands to local food heroes. This site is a faithful archive of everything published before the platform went quiet.</p>
+        </div>
+        <div>
+          <div class="about-stats">
+            <div class="stat-item">
+              <div class="stat-number">10</div>
+              <div class="stat-label">Client Projects</div>
+            </div>
+            <div class="stat-item">
+              <div class="stat-number">20</div>
+              <div class="stat-label">BowerBirds Profiled</div>
+            </div>
+            <div class="stat-item">
+              <div class="stat-number">16</div>
+              <div class="stat-label">Editorial Features</div>
+            </div>
+            <div class="stat-item">
+              <div class="stat-number">3</div>
+              <div class="stat-label">Years Active</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- SERVICES -->
+  <section class="services-section" id="services">
+    <div class="container">
+      <p class="section-label">Capabilities</p>
+      <h2 class="section-title">What The Boweress Did</h2>
+      <p class="section-intro">From strategy to shoot, the studio delivered across the full content spectrum &mdash; for brands that wanted creative work with cultural intelligence built in.</p>
+      <div class="services-grid">
+        <div class="service-card">
+          <div class="service-icon"><i class="fa fa-film"></i></div>
+          <h3>Video Production</h3>
+          <p>End-to-end video production including shoot coordination, direction, and post-production. Films premiered at experiential events and distributed across digital channels.</p>
+        </div>
+        <div class="service-card">
+          <div class="service-icon"><i class="fa fa-camera"></i></div>
+          <h3>Photography &amp; Content</h3>
+          <p>Original photography for brand campaigns, editorial shoots, and social media. Studio and on-location work across Sydney, Tasmania, the Blue Mountains and beyond.</p>
+        </div>
+        <div class="service-card">
+          <div class="service-icon"><i class="fa fa-instagram"></i></div>
+          <h3>Social Media Strategy</h3>
+          <p>Instagram strategy, content calendar design, and ongoing management. Built brand voices for clients from airlines to disability tech startups.</p>
+        </div>
+        <div class="service-card">
+          <div class="service-icon"><i class="fa fa-pencil"></i></div>
+          <h3>Editorial &amp; Copywriting</h3>
+          <p>Long-form features, campaign copy, EDM content, and brand narratives. A strong editorial sensibility ran through every piece of writing produced.</p>
+        </div>
+        <div class="service-card">
+          <div class="service-icon"><i class="fa fa-users"></i></div>
+          <h3>Community Building</h3>
+          <p>Created and ran the BowerBirds platform &mdash; a curated interview series spotlighting women in creative, commercial, and activist roles across Australia and beyond.</p>
+        </div>
+        <div class="service-card">
+          <div class="service-icon"><i class="fa fa-map-marker"></i></div>
+          <h3>Experiential &amp; Events</h3>
+          <p>Content coverage and creative production for live events, festival activations, and brand launches &mdash; including MINI at Dark Mofo and Hendricks Gin in Sydney.</p>
+        </div>
+        <div class="service-card">
+          <div class="service-icon"><i class="fa fa-code"></i></div>
+          <h3>Web Design &amp; Development</h3>
+          <p>End-to-end digital presence &mdash; from concept and design through to build and launch. The Boweress platform itself is a testament to the studio&rsquo;s full-stack creative capability.</p>
+        </div>
+        <div class="service-card">
+          <div class="service-icon"><i class="fa fa-paint-brush"></i></div>
+          <h3>Art &amp; Creative Direction</h3>
+          <p>Brand and creative consultation, visual identity, and art direction across shoots, campaigns, and brand partnerships. Where the idea becomes the visual.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CLIENTS -->
+  <section class="clients-section" id="clients">
+    <div class="container">
+      <p class="section-label">Selected Work</p>
+      <h2 class="section-title">Client Projects</h2>
+      <p class="section-intro">From global automotive brands to local food heroes, the work spanned industries, mediums, and scales.</p>
+      <div class="clients-grid">
+
+        <div class="client-card">
+          <p class="client-brand">Hendricks Gin</p>
+          <h3>Ways of Seeing</h3>
+          <p>Production and commission of an abstract short film by Director Ben Charles Edward, in association with The Smalls, London. Premiered at an experiential event in Sydney for Hendricks Gin Australia.</p>
+          <div class="client-tags">
+            <span class="tag">Film Production</span>
+            <span class="tag">Experiential</span>
+            <span class="tag">Commission</span>
+          </div>
+          <a href="projects/hendricks-x-ways-seeing.html" class="client-link">View Project &rarr;</a>
+        </div>
+
+        <div class="client-card">
+          <img src="images/projects/mini-tasmania-thumb.jpg" alt="MINI Discover Tasmania" class="client-img">
+          <p class="client-brand">MINI Australia</p>
+          <h3>Discover Tasmania</h3>
+          <p>The New MINI, The New Original. Original content production exploring Tasmania, combining long-form feature writing with photography for MINI Australia&rsquo;s digital channels.</p>
+          <div class="client-tags">
+            <span class="tag">Photography</span>
+            <span class="tag">Editorial</span>
+            <span class="tag">Travel</span>
+          </div>
+          <a href="projects/mini.html" class="client-link">View Project &rarr;</a>
+        </div>
+
+        <div class="client-card">
+          <img src="images/projects/mini-dark-mofo-thumb.jpg" alt="MINI x Dark Mofo" class="client-img">
+          <p class="client-brand">MINI Australia</p>
+          <h3>MINI x Dark Mofo</h3>
+          <p>Content coverage of MINI at Hobart&rsquo;s Dark Mofo winter arts festival &mdash; capturing the intersection of automotive brand and avant-garde cultural event.</p>
+          <div class="client-tags">
+            <span class="tag">Content Coverage</span>
+            <span class="tag">Festival</span>
+            <span class="tag">Photography</span>
+          </div>
+          <a href="projects/mini-x-dark-mofo.html" class="client-link">View Project &rarr;</a>
+        </div>
+
+        <div class="client-card">
+          <p class="client-brand">MINI Australia</p>
+          <h3>MINI Drives the Blue Mountains</h3>
+          <p>Video and stills production for the new MINI Countryman through the Blue Mountains, crafted for social media and digital distribution.</p>
+          <div class="client-tags">
+            <span class="tag">Video Production</span>
+            <span class="tag">Photography</span>
+            <span class="tag">Social Media</span>
+          </div>
+          <a href="projects/mini-drives-blue-mountains.html" class="client-link">View Project &rarr;</a>
+        </div>
+
+        <div class="client-card">
+          <p class="client-brand">MINI Australia</p>
+          <h3>MINI Drives the Beach</h3>
+          <p>Video and stills production at Hawks Nest for online feature and social media distribution, putting the MINI range in a distinctly Australian coastal context.</p>
+          <div class="client-tags">
+            <span class="tag">Video Production</span>
+            <span class="tag">Photography</span>
+            <span class="tag">Location Shoot</span>
+          </div>
+          <a href="projects/mini-drives-beach.html" class="client-link">View Project &rarr;</a>
+        </div>
+
+        <div class="client-card">
+          <p class="client-brand">China Eastern Airlines</p>
+          <h3>Social Media Strategy &amp; Setup</h3>
+          <p>World-class hospitality with Eastern charm. Full Instagram social media strategy, design and content creation for China Eastern Airlines&rsquo; Australian presence.</p>
+          <div class="client-tags">
+            <span class="tag">Social Strategy</span>
+            <span class="tag">Content Creation</span>
+            <span class="tag">Design</span>
+          </div>
+          <a href="projects/china-eastern-airlines-social-setup.html" class="client-link">View Project &rarr;</a>
+        </div>
+
+        <div class="client-card">
+          <img src="images/projects/cornersmith-thumb.jpg" alt="Cornersmith" class="client-img">
+          <p class="client-brand">Cornersmith</p>
+          <h3>Now Serving &mdash; Marrickville Relaunch</h3>
+          <p>Campaign delivery for Cornersmith Marrickville&rsquo;s relaunch, including social media management, original photography and EDM content.</p>
+          <div class="client-tags">
+            <span class="tag">Social Media</span>
+            <span class="tag">Photography</span>
+            <span class="tag">EDM</span>
+          </div>
+          <a href="projects/cornersmith.html" class="client-link">View Project &rarr;</a>
+        </div>
+
+        <div class="client-card">
+          <img src="images/projects/sameview-thumb.jpg" alt="Sameview" class="client-img">
+          <p class="client-brand">Sameview</p>
+          <h3>Disability Care Platform</h3>
+          <p>Social strategy and content for Sameview &mdash; a disability care coordination app helping families thrive with confidence. Purpose-led content for a genuinely meaningful product.</p>
+          <div class="client-tags">
+            <span class="tag">Social Strategy</span>
+            <span class="tag">Purpose-Led</span>
+            <span class="tag">App</span>
+          </div>
+          <a href="projects/sameview.html" class="client-link">View Project &rarr;</a>
+        </div>
+
+        <div class="client-card">
+          <img src="images/projects/shedd-thumb.jpg" alt="Shedd" class="client-img">
+          <p class="client-brand">Shedd</p>
+          <h3>Women&rsquo;s Fashion App</h3>
+          <p>Full-scale studio video production for Shedd, a women&rsquo;s pre-loved fashion app &mdash; delivering a polished commercial shoot for a disruptive marketplace brand.</p>
+          <div class="client-tags">
+            <span class="tag">Video Production</span>
+            <span class="tag">Studio Shoot</span>
+            <span class="tag">Fashion</span>
+          </div>
+          <a href="projects/shedd.html" class="client-link">View Project &rarr;</a>
+        </div>
+
+        <div class="client-card">
+          <img src="images/projects/apop-thumb.jpg" alt="A Peace of Palestine" class="client-img">
+          <p class="client-brand">The Boweress x Ballare Co</p>
+          <h3>A Peace of Palestine</h3>
+          <p>Portrait exhibition and all-female panel at Comber Street Studios &mdash; a project that brought together photography, activism, and community in one powerful event.</p>
+          <div class="client-tags">
+            <span class="tag">Exhibition</span>
+            <span class="tag">Portrait Photography</span>
+            <span class="tag">Events</span>
+          </div>
+          <a href="projects/a-peace-of-palestine.html" class="client-link">View Project &rarr;</a>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- EDITORIAL FEATURES -->
+  <section class="features-section" id="features">
+    <div class="container">
+      <p class="section-label">Editorial</p>
+      <h2 class="section-title">Features</h2>
+      <p class="section-intro">16 original features published across The Boweress platform &mdash; spanning travel, food, art, culture, and the places that matter.</p>
+      <div class="features-list">
+        <div class="feature-item">
+          <div class="date">Travel</div>
+          <h4><a href="features/fiordland-national-park.html">Fiordland National Park</a></h4>
+        </div>
+        <div class="feature-item">
+          <div class="date">Travel</div>
+          <h4><a href="features/blue-mountains-trailblaze.html">Blue Mountains Trailblaze</a></h4>
+        </div>
+        <div class="feature-item">
+          <div class="date">Travel</div>
+          <h4><a href="features/island-life.html">Island Life</a></h4>
+        </div>
+        <div class="feature-item">
+          <div class="date">Travel</div>
+          <h4><a href="features/south-island-bro.html">South Island, Bro</a></h4>
+        </div>
+        <div class="feature-item">
+          <div class="date">Japan</div>
+          <h4><a href="features/hakone-yuryo-hot-spring-heaven.html">Hakone Yuryo Hot Spring Heaven</a></h4>
+        </div>
+        <div class="feature-item">
+          <div class="date">Japan</div>
+          <h4><a href="features/hanami-festival.html">Hanami Festival</a></h4>
+        </div>
+        <div class="feature-item">
+          <div class="date">Japan</div>
+          <h4><a href="features/naoshima-benesee-house.html">Naoshima &amp; Benesse House</a></h4>
+        </div>
+        <div class="feature-item">
+          <div class="date">Japan</div>
+          <h4><a href="features/old-city-kyoto.html">Old City, Kyoto</a></h4>
+        </div>
+        <div class="feature-item">
+          <div class="date">Japan</div>
+          <h4><a href="features/tokyo-prefecture.html">Tokyo Prefecture</a></h4>
+        </div>
+        <div class="feature-item">
+          <div class="date">Tasmania</div>
+          <h4><a href="features/dark-mofo-2.html">Dark Mofo</a></h4>
+        </div>
+        <div class="feature-item">
+          <div class="date">Tasmania</div>
+          <h4><a href="features/hobart-botanical-gardens.html">Hobart Botanical Gardens</a></h4>
+        </div>
+        <div class="feature-item">
+          <div class="date">Art</div>
+          <h4><a href="features/james_turrell.html">James Turrell</a></h4>
+        </div>
+        <div class="feature-item">
+          <div class="date">Food</div>
+          <h4><a href="features/alice-gruzmans-power-pesto.html">Alice Gruzman&rsquo;s Power Pesto</a></h4>
+        </div>
+        <div class="feature-item">
+          <div class="date">Food</div>
+          <h4><a href="features/chicken-spot.html">Chicken Spot</a></h4>
+        </div>
+        <div class="feature-item">
+          <div class="date">Culture</div>
+          <h4><a href="features/porn-show.html">The Porn Show</a></h4>
+        </div>
+        <div class="feature-item">
+          <div class="date">Profile</div>
+          <h4><a href="features/alice-gruzmans-power-pesto.html">6 Clean Ingredients</a></h4>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- BOWERBIRDS -->
+  <section class="bowerbirds-section" id="bowerbirds">
+    <div class="container">
+      <div class="bowerbirds-intro-grid">
+        <div>
+          <p class="section-label">Community</p>
+          <h2 class="section-title">BowerBirds</h2>
+          <p style="font-size:15px;line-height:1.9;color:#666;margin-bottom:24px;">The BowerBirds series was The Boweress&rsquo;s signature editorial project: 20 in-depth profiles of women who were building things, changing things, and living on their own terms. Artists, chefs, engineers, activists, entrepreneurs, performers.</p>
+          <p style="font-size:15px;line-height:1.9;color:#666;margin-bottom:32px;">Each profile was a proper interview &mdash; long-form, thoughtful, and honest. The kind of content that doesn&rsquo;t get made enough.</p>
+          <a href="bowerbirds.html" class="btn btn-outline" style="color:#555;border-color:#ccc;">View All Profiles &rarr;</a>
+        </div>
+        <div>
+          <div class="bowerbirds-photo-grid">
+            <a class="bowerbird-photo-item" href="bowerbirds/hannah-coomber.html">
+              <img src="images/bowerbird_hannah.jpg" alt="Hannah Coomber">
+              <div class="bowerbird-photo-name">Hannah Coomber</div>
+            </a>
+            <a class="bowerbird-photo-item" href="bowerbirds/jess-miller.html">
+              <img src="images/bowerbird_jess.jpg" alt="Jess Miller">
+              <div class="bowerbird-photo-name">Jess Miller</div>
+            </a>
+            <a class="bowerbird-photo-item" href="bowerbirds/denisse-wolf.html">
+              <img src="images/bowerbird_denisse.jpg" alt="Denisse Wolf">
+              <div class="bowerbird-photo-name">Denisse Wolf</div>
+            </a>
+            <a class="bowerbird-photo-item" href="bowerbirds/julie.html">
+              <img src="images/bowerbird_julie.jpg" alt="Julie Comfort">
+              <div class="bowerbird-photo-name">Julie Comfort</div>
+            </a>
+            <a class="bowerbird-photo-item" href="bowerbirds/jayne-danielle.html">
+              <img src="images/bowerbird_jayne.jpg" alt="Jayne &amp; Danielle">
+              <div class="bowerbird-photo-name">Jayne &amp; Danielle</div>
+            </a>
+            <a class="bowerbird-photo-item" href="bowerbirds/ramona-jones.html">
+              <img src="images/bowerbird_ramona.jpg" alt="Ramona Jones">
+              <div class="bowerbird-photo-name">Ramona Jones</div>
+            </a>
+            <a class="bowerbird-photo-item" href="bowerbirds/vinita-baravka.html">
+              <img src="images/bowerbirds/vinita-baravka-thumb.jpg" alt="Vinita Baravka">
+              <div class="bowerbird-photo-name">Vinita Baravka</div>
+            </a>
+            <a class="bowerbird-photo-item" href="bowerbirds/sharlee-gibb.html">
+              <img src="images/bowerbirds/sharlee-gibb-thumb.jpg" alt="Sharlee Gibb">
+              <div class="bowerbird-photo-name">Sharlee Gibb</div>
+            </a>
+            <a class="bowerbird-photo-item" href="bowerbirds/jess-gibson.html">
+              <img src="images/bowerbirds/inner/jess-gibson/DSC_6544.jpg" alt="Jess Gibson">
+              <div class="bowerbird-photo-name">Jess Gibson</div>
+            </a>
+            <a class="bowerbird-photo-item" href="bowerbirds/jacinta-carmichael-parisi.html">
+              <img src="images/bowerbirds/jacinta-thumb.jpg" alt="Jacinta Carmichael-Parisi">
+              <div class="bowerbird-photo-name">Jacinta Carmichael</div>
+            </a>
+            <a class="bowerbird-photo-item" href="bowerbirds/memphis-mae.html">
+              <img src="images/bowerbirds/memphis-mae-thumb.jpg" alt="Memphis Mae">
+              <div class="bowerbird-photo-name">Memphis Mae</div>
+            </a>
+            <a class="bowerbird-photo-item" href="bowerbirds/alice-gruzman.html">
+              <img src="images/bowerbirds/alice-gruzman-thumb.jpg" alt="Alice Gruzman">
+              <div class="bowerbird-photo-name">Alice Gruzman</div>
+            </a>
+            <a class="bowerbird-photo-item" href="bowerbirds/kate-pascoe-squires.html">
+              <img src="images/bowerbirds/kate-pascoe-thumb.jpg" alt="Kate Pascoe Squires">
+              <div class="bowerbird-photo-name">Kate Pascoe Squires</div>
+            </a>
+            <a class="bowerbird-photo-item" href="bowerbirds/sascha.html">
+              <img src="images/bowerbirds/sascha-thumb.jpg" alt="Sascha Callaghan">
+              <div class="bowerbird-photo-name">Sascha Callaghan</div>
+            </a>
+            <a class="bowerbird-photo-item" href="bowerbirds/elizabeth-emersen-copy-draft.html">
+              <img src="images/bowerbirds/elizabeth-thumb.jpg" alt="Elizabeth Emerson">
+              <div class="bowerbird-photo-name">Elizabeth Emerson</div>
+            </a>
+            <a class="bowerbird-photo-item" href="bowerbirds/louise-acret.html">
+              <img src="images/bowerbirds/louise-acret-thumb.jpg" alt="Louise Acret">
+              <div class="bowerbird-photo-name">Louise Acret</div>
+            </a>
+            <a class="bowerbird-photo-item" href="bowerbirds/clare-nakazawa.html">
+              <img src="images/bowerbirds/inner/clare-nakazawa/_DSC5074.jpg" alt="Clare Nakazawa">
+              <div class="bowerbird-photo-name">Clare Nakazawa</div>
+            </a>
+            <a class="bowerbird-photo-item" href="bowerbirds/nina-skryzinski.html">
+              <img src="images/bowerbirds/nina-thumb.jpg" alt="Nina Skryzinski">
+              <div class="bowerbird-photo-name">Nina Skryzinski</div>
+            </a>
+            <a class="bowerbird-photo-item" href="bowerbirds/lorem-ipsum-2.html">
+              <img src="images/bowerbirds/grace-wood-thumb.jpg" alt="Grace Wood">
+              <div class="bowerbird-photo-name">Grace Wood</div>
+            </a>
+            <a class="bowerbird-photo-item" href="bowerbirds/alexis-hyde.html">
+              <div class="bb-placeholder"></div>
+              <div class="bowerbird-photo-name">Alexis Hyde</div>
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- SKILLS -->
+  <section class="skills-section" id="skills">
+    <div class="container">
+      <p class="section-label">Skills &amp; Tools</p>
+      <h2 class="section-title">Capabilities</h2>
+      <p class="section-intro">The work spanned strategy, production, writing, and community management &mdash; often all at once.</p>
+      <div class="skills-grid">
+        <div>
+          <div class="skill-row">
+            <span class="skill-name">Social Media Strategy</span>
+            <div class="skill-bar"><div class="skill-fill" style="width:95%"></div></div>
+          </div>
+          <div class="skill-row">
+            <span class="skill-name">Content Creation</span>
+            <div class="skill-bar"><div class="skill-fill" style="width:95%"></div></div>
+          </div>
+          <div class="skill-row">
+            <span class="skill-name">Editorial Writing</span>
+            <div class="skill-bar"><div class="skill-fill" style="width:90%"></div></div>
+          </div>
+          <div class="skill-row">
+            <span class="skill-name">Photography Direction</span>
+            <div class="skill-bar"><div class="skill-fill" style="width:85%"></div></div>
+          </div>
+        </div>
+        <div>
+          <div class="skill-row">
+            <span class="skill-name">Video Production</span>
+            <div class="skill-bar"><div class="skill-fill" style="width:80%"></div></div>
+          </div>
+          <div class="skill-row">
+            <span class="skill-name">Brand Strategy</span>
+            <div class="skill-bar"><div class="skill-fill" style="width:85%"></div></div>
+          </div>
+          <div class="skill-row">
+            <span class="skill-name">Community Management</span>
+            <div class="skill-bar"><div class="skill-fill" style="width:90%"></div></div>
+          </div>
+          <div class="skill-row">
+            <span class="skill-name">Campaign Management</span>
+            <div class="skill-bar"><div class="skill-fill" style="width:85%"></div></div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- LUCY PERO -->
+  <section class="lucy-section" id="lucy">
+    <div class="container">
+      <p class="section-label">The Founder</p>
+      <h2 class="section-title">Lucy Pero</h2>
+      <p class="section-intro">Visual Arts educator, Pilates instructor, and the creative director who built The Boweress.</p>
+      <div class="lucy-grid" style="grid-template-columns: 280px 1fr 1fr; gap: 60px; align-items: start;">
+        <div>
+          <img src="images/lucy-pero.jpg" alt="Lucy Pero" style="width:100%;aspect-ratio:3/4;object-fit:cover;display:block;background:#e0dbd5;">
+        </div>
+        <div class="lucy-bio">
+          <p>Lucy holds a Masters of Teaching in Visual Arts and a Bachelor of Arts in Art History and Theory, both from the University of Sydney &mdash; the academic foundation that ran through every interview, feature, and creative brief The Boweress ever produced.</p>
+          <p>She has spent the past decade teaching across Sydney&rsquo;s independent school sector. Since 2020 she has been at MLC School Sydney, first in the junior school and from 2023 as a full-time Visual Arts Teacher, drawing on her deep background in Art History and Theory to support and challenge students across K&ndash;12. In 2025 she stepped into the role of Acting Head of Department.</p>
+          <p>Beyond the classroom, Lucy is a certified Pilates instructor (Elixir School, Reformer and Mat) and the founder of <strong>P1 Pilates</strong> &mdash; an online platform offering mat classes for all levels, with a longer ambition of building tailored wellness programs for educators and students.</p>
+          <p>The thread connecting The Boweress to what came after it is easy to find: a commitment to amplifying others, building communities, and making things that last.</p>
+        </div>
+        <div>
+          <div class="lucy-role-item">
+            <div class="lucy-role-org">MLC School Sydney</div>
+            <div class="lucy-role-title">Visual Arts Teacher</div>
+            <div class="lucy-role-dates">2023 &ndash; Present &middot; Acting HoD 2025</div>
+          </div>
+          <div class="lucy-role-item">
+            <div class="lucy-role-org">MLC School Sydney</div>
+            <div class="lucy-role-title">Junior School Teacher</div>
+            <div class="lucy-role-dates">2020 &ndash; 2022</div>
+          </div>
+          <div class="lucy-role-item">
+            <div class="lucy-role-org">P1 Pilates &middot; Self-employed</div>
+            <div class="lucy-role-title">Founder &amp; Lead Pilates Instructor</div>
+            <div class="lucy-role-dates">2023 &ndash; Present</div>
+          </div>
+          <div class="lucy-role-item">
+            <div class="lucy-role-org">PLC Sydney</div>
+            <div class="lucy-role-title">Junior School Teacher</div>
+            <div class="lucy-role-dates">2017 &ndash; 2020</div>
+          </div>
+          <div class="lucy-role-item">
+            <div class="lucy-role-org">University of Sydney</div>
+            <div class="lucy-role-title">Masters of Teaching &mdash; Visual Arts</div>
+            <div class="lucy-role-dates">2008 &ndash; 2010</div>
+          </div>
+          <div class="lucy-role-item">
+            <div class="lucy-role-org">University of Sydney</div>
+            <div class="lucy-role-title">BA, Art History &amp; Theory</div>
+            <div class="lucy-role-dates">2005 &ndash; 2008</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CTA -->
+  <section class="cta-section">
+    <div class="container">
+      <p class="section-label">The Full Archive</p>
+      <h2 class="section-title">Explore The Boweress</h2>
+      <p>Every project, feature, and BowerBird profile is preserved in this archive. Dive in.</p>
+      <div style="display:flex;gap:16px;justify-content:center;flex-wrap:wrap;">
+        <a href="projects.html" class="btn btn-solid">Client Projects</a>
+        <a href="bowerbirds.html" class="btn btn-outline">BowerBirds</a>
+        <a href="features.html" class="btn btn-outline">Features</a>
+        <a href="index.html" class="btn btn-outline">Homepage</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer class="resume-footer">
+    <p>&copy; 2017&ndash;2019 The Boweress &mdash; Lucy Pero, Founder &amp; Creative Director</p>
+  </footer>
+
+</body>
+</html>
